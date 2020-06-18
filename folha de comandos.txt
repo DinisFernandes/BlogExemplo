@@ -1,0 +1,4 @@
+criar projeto : django-admin startprojetc nome .
+migrar bd : python manage.py migrate
+super usuario: python manage.py createsuperuser
+criar app: python manage.py startapp nome
