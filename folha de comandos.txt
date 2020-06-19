@@ -2,3 +2,6 @@ criar projeto : django-admin startprojetc nome .
 migrar bd : python manage.py migrate
 super usuario: python manage.py createsuperuser
 criar app: python manage.py startapp nome
+iniciar git : git init
+adicionar: git add .
+commit: git commit - "descricao commit"
