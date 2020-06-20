@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Contact
 
 # Register your models here.
 
@@ -12,5 +12,7 @@ class PostAdmin(admin.ModelAdmin):
         return Post.objects.all()
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Contact)
+
 
 
