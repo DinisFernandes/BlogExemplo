@@ -18,10 +18,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
-					<h1><strong>I am Strata</strong>, a super simple<br />
-					responsive site template freebie<br />
-					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+					<a href="#" class="image avatar"><img src="{% static 'images/logotipo.png' %}" height="150" alt="" /></a>
+					<h1><strong>Olá eu sou Daniel Meira</strong>, .....<br />
+					....<br />
 				</div>
 			</header>
 
@@ -39,41 +38,43 @@
 						<ul class="actions">
 							<li><a href="{% url 'home_blog' %}" class="button">voltar</a></li>
 						</ul>
+						<a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}&t={{ post.title }}" target="_blank">
+							Facebook
+						</a>
 					</section>
 
 				<!-- Two -->
 				<!-- Three -->
 					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<h2>Formulário de Contacto</h2>
+						<p>Qualquer texto.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
+								<form method="post" action="{% url 'save_form' %}">
+									{% csrf_token %}
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
+									<input type="submit" value="Enviar" />
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
 										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
+										Rua da Mata.<br />
+										Chafé<br />
+										Viana do Castelo
 									</li>
 									<li>
 										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
+										968-151-007
 									</li>
 									<li>
 										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
+										<a href="#">mail@mail</a>
 									</li>
 								</ul>
 							</div>

@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post, Contact
+from urllib.parse import quote_plus
 
 # Create your views here.
 
@@ -21,7 +22,8 @@ def hello_blog(request):
 
 def post_detail(request, id):
     post = Post.objects.get(id=id)
-    return render(request, 'post_detail.html', {'post':post})
+    context = {'post':post}
+    return render(request, 'post_detail.html', context)
 
 
 def save_form(request):
@@ -33,3 +35,12 @@ def save_form(request):
     )
 
     return render(request, 'contact_success.html',{'name_contact': name})
+
+def post_share_fb(request, id):
+    post = Post.objects.get(id=id)
+    share_string = quote_plus(post.imagem.url)
+    context = {'post':post,
+        'share_string': share_string
+    }
+
+    return render(request, 'post_share_fb.html', context)
