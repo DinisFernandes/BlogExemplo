@@ -25,7 +25,7 @@ SECRET_KEY = 'ils#&^a)0j13(s-y*c=-5-+n(ybwkxlez@txqs#$r7*q8vkar@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.71.209.123', '127.0.0.1']
+ALLOWED_HOSTS = ['35.246.114.231', '127.0.0.1']
 
 
 # Application definition
